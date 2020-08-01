@@ -1,0 +1,89 @@
+/* Adds the Consolas font to the file */
+@font-face {
+	font-family: Consolas;
+	src: url(Font/Consolas.ttf);
+	font-style: normal;
+	font-weight: 100;
+}
+
+:root {
+	background: #000; /** Black background. **/
+	color: #16C60C; /** Green font color. **/
+	font-family: Consolas; /** The font CMD uses. **/
+	font-size: 24px; /** Font size that I found works best. Feel free to change it. **/
+}
+
+/* Sets the outer margins to 0 */
+body, html {
+	margin: 0;
+}
+
+/* Titlebar  */
+header {
+	width: 100%;
+	height: 38px;
+	background: #fff;
+	color: #000;
+}
+
+/* Adds the text "Command Prompt" */
+header:before {
+	content: "Command Prompt";
+	position: absolute;
+	top: 0.2rem;
+	left: 1.8rem;
+}
+
+/* CMD Icon */
+.cmdIcon {
+	/* Sets the background image */
+	background-image: url(Icon/cmd_icon.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* Dimesions */
+	width: 30px;
+	height: 25px;
+	/* Position */
+	position: absolute;
+	top: 0.2rem;
+	left: 0.25rem;
+}
+
+/* Makes the text selection look like the one in CMD */
+::selection, ::-moz-selection {
+	color: #e939f3;
+	background: #f3f3f3;
+}
+
+/* Styling for "a" tags */
+a, a:hover, a:active, a:focus, a:visited {
+	text-decoration: underline;
+	color: inherit;
+}
+
+a:hover {
+	filter: hue-rotate(90deg);
+	
+}
+
+/* Makes lists look somewhat like the TREE command in CMD */
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "├──";
+  padding-right: 5px;
+}
+
+li:last-child:before {
+	content: "└──";
+}
