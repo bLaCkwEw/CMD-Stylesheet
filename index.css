@@ -56,6 +56,17 @@ header:before {
 	background: #f3f3f3;
 }
 
+/* Styling for "a" tags */
+a, a:hover, a:active, a:focus, a:visited {
+	text-decoration: underline;
+	color: inherit;
+}
+
+a:hover {
+	filter: hue-rotate(90deg);
+	
+}
+
 /* Makes lists look somewhat like the TREE command in CMD */
 ul {
   list-style: none;
@@ -73,3 +84,6 @@ li:before {
   padding-right: 5px;
 }
 
+li:last-child:before {
+	content: "└──";
+}
