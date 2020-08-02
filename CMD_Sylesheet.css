@@ -63,7 +63,7 @@ a, a:hover, a:active, a:focus, a:visited {
 }
 
 a:hover {
-	filter: hue-rotate(90deg);
+	color: #767676;
 	
 }
 
