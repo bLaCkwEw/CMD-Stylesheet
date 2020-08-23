@@ -14,7 +14,7 @@
 }
 
 /* Sets the outer margins to 0 */
-body, html {
+body, html, p {
 	margin: 0;
 }
 
@@ -86,4 +86,22 @@ li:before {
 
 li:last-child:before {
 	content: "└──";
+}
+
+/* Adds a blinking animation */
+.blinkAnim {
+	background: white;
+	width: 0.8rem;
+	height: 0.25rem;
+	display: inline-block;
+	/* Animation */
+	animation: blink 1500ms infinite;
+}
+
+@keyframes blink{
+    0%{     background: #fff;    }
+    49%{    background: #fff; }
+    60%{    background: transparent; }
+    99%{    background:transparent;  }
+    100%{   background: #fff;    }
 }
